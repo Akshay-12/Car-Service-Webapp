@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="decoration.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link href="{% static 'first/decoration.css'%}" rel="stylesheet">
+    <img src="first/jag.png">
+    <img src="first/9.jpeg">
+    <img src="first/7.jpeg">
+    <title>Royal Garage 786</title>
+<style>
+    .compan{
+        padding-left: 400px;
+        color:white;
+        font-size: 25px;
+        font-family: 'Merienda', cursive;
+        float:left;
+    }
+    #company{
+        padding-left: 100px;
+
+    }
+    .carsel{
+        float:left;
+    }
+
+.compan1{
+    color:white;
+    font-size: 25px;
+    font-family: 'Merienda', cursive;
+    float:left;
+}
+</style>>
+
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+   <img src="jag.png" width="70px" width="80px"> <a id="topbar" class="navbar-brand" href="#">Royal Garage</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link " href="#"><button type="btn" class="btn btn-dark">Home <span class="sr-only">(current)</span></button></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#"><button type="btn" class="btn btn-dark">Gallery</button></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="btn" class="btn btn-dark"> Centres</button>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Pune</a>
+                    <a class="dropdown-item" href="#">Aurangabad</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Mumbai</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div id="second" class="container-fluid">
+Welcome to Royal Garage
+</div>
+<p class="compan">Car company</p>
+<form  action ="{%url 'add' %}" method="POST" >
+    
+    {%csrf_token%}
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                 
+                  {{form.name}}
+                
+                
+                </select>
+               
+            </div>
+            
+        </div>
+    </form>
+
+
+<p class="compan1"><span>Car model</span>
+<div class="container carsel">
+    <form action ="{%url 'add' %}" method="POST">
+        {%csrf_token%}
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+
+                {{formr.name}} 
+                <button type="submit" class="btn btn-primary ">Submit</button>
+                </select>
+            </div>
+          
+            <div class="col-auto my-1">
+                
+                </div>
+            
+            </div>
+           
+             <div class="custom-control custom-checkbox mr-sm-2">
+                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                    <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+
+             </div>
+            
+        </div>
+    </form>
+
+
+</div>
+</p>
+
+
+<script type="text/javascript">
+
+
+function GetItemValue(q){
+	var id1;
+    var e=document.getElementById(q);
+    var setValue=e.options[e.selectedIndex].text;
+    alert(setValue);
+    <input type="hidden" name="car_token" value="{{id1}}">
+    if (setValue==Audi) {
+    	 id1=1;
+    }
+    else
+    {
+      id1=2
+    }
+
+}
+
+</script>
+
+
+
+<script src="inter.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+<footer id="bot">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">We believe on customers</h1>
+            <p class="lead">Money comes later the </p>
+        </div>
+    </div>
+</footer>
+</html>

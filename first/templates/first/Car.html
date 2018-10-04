@@ -16,15 +16,27 @@
 
              <label> Car Company</label>
              <select id = "companyList">
-               <option value = "1">Maruti Suzuki</option>
-               <option value = "2">Hyundai</option>
-               <option value = "3">Honda</option>
-               <option value = "4">Renault</option>
+                {% for i in post %}
+                  <option value = "i">{{i.name}}</option>
+                {% endfor %}
              </select>
              </field>
              <br> <br> <br> <br>
              <field>
-             <label>Car Company</label>
+            
+
+<select id=companyList2>
+
+
+    {% for i in post %}
+      <option value = "i">{{i.name}}</option>
+    {% endfor %}
+}
+
+</select>
+             </field>
+             <field>
+             <label>Car</label>
              <select id = "modelList">
                <option value = "1">Alto k10 Lxi</option>
                <option value = "2">Alto k10 Vxi</option>

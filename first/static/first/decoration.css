@@ -1,0 +1,44 @@
+body{
+    background-image: url("9.jpeg");
+
+}
+#topbar{
+
+
+   color:lightseagreen;
+    font-size:25px;
+    letter-spacing: 1px;
+    font-family: 'Satisfy', cursive;
+    font-weight: bolder;
+
+
+}
+.topelements{
+    color: whitesmoke;
+}
+#second{
+font-size: 50px;
+    color:whitesmoke;
+    font-family: 'Cookie', cursive;
+    padding-left: 320px;
+
+}
+.options
+{
+    margin-left: 600px;
+}
+#carselect{
+    float:left;
+    position: relative;
+    margin-left: 400px;
+    color:white;
+}
+#rep,#rep1{
+    margin-left: 10px;
+    width: 150px;
+}
+
+
+#bot{
+    margin-top:160px;
+}
